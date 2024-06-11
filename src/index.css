@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: whitesmoke;
+}
+
+.col {
+  padding: 0;
+}
+
+.p-left {
+  padding-left: .5rem;
+}
+
+.p-right {
+  padding-right: .5rem;
+}
+
+.row {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 1140px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.line {
+  height: 3px;
+  margin: 10px 0;
+  background-color: #65447A;
+}
+
+.btn {
+  color: whitesmoke;
+  background-color: #65447A;
+  border-color: #65447A;
+}
+
+.btn-sort{
+  display: block;
+}
+
+.btn-up,
+.btn-down {
+  background-color: transparent;
+  border: 0;
+  color: #65447A;
+}
+
+.btn-up:hover,
+.btn-down:hover {
+  background-color: transparent;
+  border: 0;
+  color: #65447A;
+}
+
+.btn-eye:hover {
+  background-color: lightskyblue;
+  color: darkslategray;
+}
+
+.btn-update:hover {
+  background-color: lightgoldenrodyellow;
+  color: darkslategray;
+}
+
+.btn-delete:hover {
+  background-color: lightcoral;
+  color: darkslategray;
+}
+
+.btn-submit {
+  letter-spacing: 1px;
+}
+
+.col-border {
+  border-top: 1px solid;
+  padding: 5px 0;
+  border-bottom: 1px solid;
+  border-color: rgba(0, 0, 0, .3);
+}
+
+.card-title {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.card-category {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.card-price {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-desc {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.d-center{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+    align-items: center;
+}
