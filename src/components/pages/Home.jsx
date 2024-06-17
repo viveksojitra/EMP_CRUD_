@@ -1,8 +1,10 @@
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react-hooks/exhaustive-deps */
 // Data Table
 import { faPenToSquare, faTrashCan } from "@fortawesome/free-regular-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useEffect, useState } from "react";
-import { Button, Form, Nav, NavDropdown, Table } from "react-bootstrap"
+import React, { useEffect, useState } from "react";
+import { Button, Col, Form, Nav, NavDropdown, Row, Table } from "react-bootstrap"
 import { getData } from "../../services/getData";
 import { useNavigate } from "react-router";
 import { faArrowDownLong, faArrowUpLong } from "@fortawesome/free-solid-svg-icons";
@@ -10,6 +12,8 @@ import { setData } from "../../services/setData";
 import category from "../../services/department";
 
 function Home() {
+
+    console.log("Home Run");
 
     let key = 0;
 
@@ -139,84 +143,132 @@ function Home() {
                         <thead>
                             <tr>
                                 <th>emp id</th>
-                                <th className="d-flex justify-content-center align-items-center">
+                                <th>
                                     <div className="d-flex justify-content-center align-items-center">
-                                        <div>emp name</div>
-                                        <div className="btn-sort position-absolute end-0">
-                                            <Button className="btn btn-up" onClick={() => handleSort("asc", "empName")}>
-                                                <FontAwesomeIcon icon={faArrowUpLong} />
-                                            </Button>
-                                            <Button className="btn btn-down" onClick={() => handleSort("dsc", "empName")}>
-                                                <FontAwesomeIcon icon={faArrowDownLong} />
-                                            </Button>
-                                        </div>
+                                        <Row className="d-flex flex-row flex-nowrap w-100">
+                                            <Row className="d-flex w-50">
+                                                <Col className="d-flex text-wrap">emp name</Col>
+                                            </Row>
+                                            <Row className="d-flex w-25 mx-3">
+                                                <Col className="d-flex justify-content-end w-100">
+                                                    <Button className="btn btn-up" onClick={() => handleSort("asc", "empName")}>
+                                                        <FontAwesomeIcon icon={faArrowUpLong} />
+                                                    </Button>
+                                                </Col>
+                                                <Col className="d-flex justify-content-end w-100">
+                                                    <Button className="btn btn-down" onClick={() => handleSort("dsc", "empName")}>
+                                                        <FontAwesomeIcon icon={faArrowDownLong} />
+                                                    </Button>
+                                                </Col>
+                                            </Row>
+                                        </Row>
                                     </div>
                                 </th>
-                                <th >
+                                <th>
                                     <div className="d-flex justify-content-center align-items-center">
-                                        <div>emp age</div>
-                                        <div className="btn-sort position-absolute end-0">
-                                            <Button className="btn btn-up" onClick={() => handleSort("asc", "empAge")}>
-                                                <FontAwesomeIcon icon={faArrowUpLong} />
-                                            </Button>
-                                            <Button className="btn btn-down" onClick={() => handleSort("dsc", "empAge")}>
-                                                <FontAwesomeIcon icon={faArrowDownLong} />
-                                            </Button>
-                                        </div>
+                                        <Row className="d-flex flex-row flex-nowrap w-100">
+                                            <Row className="d-flex w-50">
+                                                <Col className="d-flex text-wrap">emp age</Col>
+                                            </Row>
+                                            <Row className="d-flex w-25 mx-3">
+                                                <Col className="d-flex justify-content-end w-100">
+                                                    <Button className="btn btn-up" onClick={() => handleSort("asc", "empName")}>
+                                                        <FontAwesomeIcon icon={faArrowUpLong} />
+                                                    </Button>
+                                                </Col>
+                                                <Col className="d-flex justify-content-end w-100">
+                                                    <Button className="btn btn-down" onClick={() => handleSort("dsc", "empName")}>
+                                                        <FontAwesomeIcon icon={faArrowDownLong} />
+                                                    </Button>
+                                                </Col>
+                                            </Row>
+                                        </Row>
                                     </div>
                                 </th>
 
 
                                 <th >
                                     <div className="d-flex justify-content-center align-items-center">
-                                        <div>emp department</div>
-                                        <div className="btn-sort position-absolute end-0">
-                                            <Button className="btn btn-up" onClick={() => handleSort("asc", "empDepartment")}>
-                                                <FontAwesomeIcon icon={faArrowUpLong} />
-                                            </Button>
-                                            <Button className="btn btn-down" onClick={() => handleSort("dsc", "empDepartment")}>
-                                                <FontAwesomeIcon icon={faArrowDownLong} />
-                                            </Button>
-                                        </div>
+                                        <Row className="d-flex flex-row flex-nowrap w-100">
+                                            <Row className="d-flex w-50">
+                                                <Col className="d-flex text-wrap">emp department</Col>
+                                            </Row>
+                                            <Row className="d-flex w-25 mx-3">
+                                                <Col className="d-flex justify-content-end w-100">
+                                                    <Button className="btn btn-up" onClick={() => handleSort("asc", "empName")}>
+                                                        <FontAwesomeIcon icon={faArrowUpLong} />
+                                                    </Button>
+                                                </Col>
+                                                <Col className="d-flex justify-content-end w-100">
+                                                    <Button className="btn btn-down" onClick={() => handleSort("dsc", "empName")}>
+                                                        <FontAwesomeIcon icon={faArrowDownLong} />
+                                                    </Button>
+                                                </Col>
+                                            </Row>
+                                        </Row>
                                     </div>
                                 </th>
                                 <th >
                                     <div className="d-flex justify-content-center align-items-center">
-                                        <div>emp position</div>
-                                        <div className="btn-sort position-absolute end-0">
-                                            <Button className="btn btn-up" onClick={() => handleSort("asc", "empPosition")}>
-                                                <FontAwesomeIcon icon={faArrowUpLong} />
-                                            </Button>
-                                            <Button className="btn btn-down" onClick={() => handleSort("dsc", "empPosition")}>
-                                                <FontAwesomeIcon icon={faArrowDownLong} />
-                                            </Button>
-                                        </div>
+                                        <Row className="d-flex flex-row flex-nowrap w-100">
+                                            <Row className="d-flex w-50">
+                                                <Col className="d-flex text-wrap">emp position</Col>
+                                            </Row>
+                                            <Row className="d-flex w-25 mx-3">
+                                                <Col className="d-flex justify-content-end w-100">
+                                                    <Button className="btn btn-up" onClick={() => handleSort("asc", "empName")}>
+                                                        <FontAwesomeIcon icon={faArrowUpLong} />
+                                                    </Button>
+                                                </Col>
+                                                <Col className="d-flex justify-content-end w-100">
+                                                    <Button className="btn btn-down" onClick={() => handleSort("dsc", "empName")}>
+                                                        <FontAwesomeIcon icon={faArrowDownLong} />
+                                                    </Button>
+                                                </Col>
+                                            </Row>
+                                        </Row>
                                     </div>
                                 </th>
                                 <th >
                                     <div className="d-flex justify-content-center align-items-center">
-                                        <div>emp salary</div>
-                                        <div className="btn-sort position-absolute end-0">
-                                            <Button className="btn btn-up" onClick={() => handleSort("asc", "empSalary")}>
-                                                <FontAwesomeIcon icon={faArrowUpLong} />
-                                            </Button>
-                                            <Button className="btn btn-down" onClick={() => handleSort("dsc", "empSalary")}>
-                                                <FontAwesomeIcon icon={faArrowDownLong} />
-                                            </Button>
-                                        </div>
+                                        <Row className="d-flex flex-row flex-nowrap w-100">
+                                            <Row className="d-flex w-50">
+                                                <Col className="d-flex text-wrap">emp salary</Col>
+                                            </Row>
+                                            <Row className="d-flex w-25 mx-3">
+                                                <Col className="d-flex justify-content-end w-100">
+                                                    <Button className="btn btn-up" onClick={() => handleSort("asc", "empName")}>
+                                                        <FontAwesomeIcon icon={faArrowUpLong} />
+                                                    </Button>
+                                                </Col>
+                                                <Col className="d-flex justify-content-end w-100">
+                                                    <Button className="btn btn-down" onClick={() => handleSort("dsc", "empName")}>
+                                                        <FontAwesomeIcon icon={faArrowDownLong} />
+                                                    </Button>
+                                                </Col>
+                                            </Row>
+                                        </Row>
                                     </div>
                                 </th>
                                 <th >
                                     <div className="d-flex justify-content-center align-items-center">
-                                        <div>emp email</div>
-                                        <div className="btn-sort position-absolute end-0">
-                                            <Button className="btn btn-up" onClick={() => handleSort("asc", "empEmail")}>
-                                                <FontAwesomeIcon icon={faArrowUpLong} />
-                                            </Button>
-                                            <Button className="btn btn-down" onClick={() => handleSort("dsc", "empEmail")}>
-                                                <FontAwesomeIcon icon={faArrowDownLong} />
-                                            </Button>
-                                        </div>
+                                        <Row className="d-flex flex-row flex-nowrap w-100">
+                                            <Row className="d-flex w-50">
+                                                <Col className="d-flex text-wrap">emp email</Col>
+                                            </Row>
+                                            <Row className="d-flex w-25 mx-3">
+                                                <Col className="d-flex justify-content-end w-100">
+                                                    <Button className="btn btn-up" onClick={() => handleSort("asc", "empName")}>
+                                                        <FontAwesomeIcon icon={faArrowUpLong} />
+                                                    </Button>
+                                                </Col>
+                                                <Col className="d-flex justify-content-end w-100">
+                                                    <Button className="btn btn-down" onClick={() => handleSort("dsc", "empName")}>
+                                                        <FontAwesomeIcon icon={faArrowDownLong} />
+                                                    </Button>
+                                                </Col>
+                                            </Row>
+                                        </Row>
                                     </div>
                                 </th>
                                 <th>action</th>
@@ -255,4 +307,4 @@ function Home() {
     )
 }
 
-export default Home
+export default React.memo(Home);

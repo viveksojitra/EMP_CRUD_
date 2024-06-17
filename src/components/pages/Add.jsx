@@ -1,12 +1,15 @@
+/* eslint-disable react-refresh/only-export-components */
 // Create Form
 import generateUniqueId from "generate-unique-id";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Button, Form } from "react-bootstrap";
 import { getData } from "../../services/getData";
 import { setData } from "../../services/setData";
 import { useNavigate } from "react-router";
 
 function Add() {
+    
+    console.log("Add Run");
 
     const navigateTo = useNavigate();
 
@@ -144,4 +147,4 @@ function Add() {
     )
 }
 
-export default Add
+export default React.memo(Add);

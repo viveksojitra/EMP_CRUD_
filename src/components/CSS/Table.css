@@ -28,10 +28,6 @@ tbody {
     overflow: scroll;
 }
 
-th {
-    min-width: 110px;
-}
-
 td {
     height: 100%;
 }

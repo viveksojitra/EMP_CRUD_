@@ -1,9 +1,13 @@
+/* eslint-disable react-refresh/only-export-components */
 import { faHouse, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
 import { useNavigate } from "react-router";
 
 // Header
 function Header() {
+
+    console.log("Header Run");
 
     const nevigateTo = useNavigate();
 
@@ -34,4 +38,4 @@ function Header() {
     )
 }
 
-export default Header;
+export default React.memo(Header);

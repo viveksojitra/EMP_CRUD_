@@ -1,6 +1,7 @@
+/* eslint-disable react-refresh/only-export-components */
 // Update Form
 import generateUniqueId from "generate-unique-id";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Button, Form } from "react-bootstrap";
 import { getData } from "../../services/getData";
 import { useNavigate } from "react-router";
@@ -8,6 +9,8 @@ import { useParams } from "react-router"
 import { setData } from "../../services/setData";
 
 function Update() {
+
+    console.log("Update Run");
 
     // id With Fatched Data
     const { id } = useParams();
@@ -143,7 +146,7 @@ function Update() {
                         {/* row-6 */}
                         <Form.Group className="mb-3 d-flex align-items-center">
                             <Form.Label className="w-3">Email</Form.Label>
-                            <Form.Control className="input capitalise" type="text" name='empEmail' value={input.empEmail} placeholder='Email' onChange={handleInput} />
+                            <Form.Control className="input" type="text" name='empEmail' value={input.empEmail} placeholder='Email' onChange={handleInput} />
                         </Form.Group>
 
                         {/* submit */}
@@ -157,4 +160,4 @@ function Update() {
     )
 }
 
-export default Update
+export default React.memo(Update);
